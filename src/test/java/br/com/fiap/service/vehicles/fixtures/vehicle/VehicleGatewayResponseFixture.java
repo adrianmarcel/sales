@@ -1,0 +1,24 @@
+package br.com.fiap.service.vehicles.fixtures.vehicle;
+
+import br.com.fiap.service.sales.gateway.domain.vehicle.model.VehicleGatewayResponse;
+import java.math.BigDecimal;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.util.UUID;
+
+public class VehicleGatewayResponseFixture {
+
+  public static VehicleGatewayResponse validResponse() {
+    return VehicleGatewayResponse.builder()
+        .id(UUID.fromString("1cc73839-9b34-4158-9f93-789dc63a1cb2"))
+        .brand("Mercedes Benz")
+        .model("C300")
+        .color("White")
+        .year(2023)
+        .status("AVAILABLE")
+        .price(new BigDecimal("300000"))
+        .createdAt(OffsetDateTime.of(2025, 12, 31, 10, 11, 12, 1234, ZoneOffset.UTC))
+        .createdAt(OffsetDateTime.of(2025, 12, 31, 10, 15, 12, 1234, ZoneOffset.UTC))
+        .build();
+  }
+}
