@@ -1,6 +1,6 @@
 api:
   vehicles:
-    url: http://localhost:8999
+    url: ${VEHICLES_BASE_URL:http://localhost:8999}
 
 feign:
   circuitbreaker:
@@ -37,7 +37,7 @@ server:
 
 spring:
   application:
-    name: vehicles
+    name: sales
   autoconfigure:
     exclude: 'org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration'
   cloud:
